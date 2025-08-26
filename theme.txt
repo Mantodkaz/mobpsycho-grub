@@ -1,0 +1,78 @@
+# ==== Background ====
+desktop-image: "background.png"
+desktop-image-scale-method: "padding"
+desktop-image-h-align: "center"
+desktop-color: "#000000"
+terminal-box: "terminal_box_*.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
+# ==== Fonts ====
+title-text: ""
+title-font:   "font/mob-28.pf2"
+message-font: "font/mob-28.pf2"
+terminal-font:"font/mob-28.pf2"
+
+# ==== Boot menu ====
++ boot_menu {
+  left   = 5%
+  top    = 70%
+  width  = 25%
+  height = 20%
+
+  item_height = 32
+  item_padding = 6
+  item_spacing = 4
+
+  item_font            = "font/mob-28.pf2"
+  item_color           = "#ACA8A5"
+  selected_item_color  = "#FFFFFF"
+
+}
+
+# ==== Label ====
++ label {
+  color = "#ACA8A5"
+  font  = "font/mob-28.pf2"
+  left  = 7%+3
+  top   = 86%-10
+  width = 31%
+  align = "left"
+  text  = ""
+}
+
+# ==== Countdown ====
++ label {
+  color = "#ACA8A5"
+  font  = "font/mob-28.pf2"
+  left  = 85%+1
+  top   = 86%-10
+  width = 31%
+  align = "left"
+  text  = "Booting"
+}
++ label {
+  color = "#5AEB71"
+  font  = "font/mob-28.pf2"
+  left  = 85%+112
+  top   = 86%-13
+  width = 31%
+  align = "left"
+  id    = "__timeout__"
+  text  = "%d"
+}
+
+# ==== Progress bar ====
++ progress_bar {
+  id = "__timeout__"
+  left  = 5%
+  top   = 95%
+  width = 90%
+  height= 2%
+  border_color    = "#00ffcc"
+  highlight_color = "#ff00ff"
+}
+
